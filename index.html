@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>   
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="container" id="table1">
+        <div class="row-cols-3 row justify-content-center" id="line1">
+            <div class="col-sm-auto" id="cell1" onclick="interaction(this)">
+
+            </div>
+            <div class="col-sm-auto" id="cell2" onclick="interaction(this)">
+                
+            </div>
+            <div class="col-sm-auto" id="cell3" onclick="interaction(this)">
+                
+            </div>
+          </div>
+          <div class="row-cols-3 row justify-content-center" id="line2">
+            <div class="col-sm-auto" id="cell4" onclick="interaction(this)">
+              
+            </div>
+            <div class="col-sm-auto" id="cell5" onclick="interaction(this)">
+                
+            </div>
+            <div class="col-sm-auto" id="cell6" onclick="interaction(this)">
+                
+            </div>
+          </div>
+          <div class="row-cols-3 row justify-content-center" id="line3">
+            <div class="col-sm-auto" id="cell7" onclick="interaction(this)">
+              
+            </div>
+            <div class="col-sm-auto" id="cell8" onclick="interaction(this)">
+                
+            </div>
+            <div class="col-sm-auto" id="cell9" onclick="interaction(this)">
+                
+            </div>
+          </div>
+    </div>
+
+    <h1 id="final_msg"></h1>
+    <div id="botao">
+        <button class="btn btn-primary" id="reiniciar" style="display: none" onclick="refresh()">Play Again</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+body{
+    background-color: #F2B705;
+    font-family: 'Ubuntu';
+}
+#table1{
+    /*border: solid black;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#botao{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.col-sm-auto{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+#cell1{
+    border-right: solid black 5px;
+    border-bottom: solid black 5px;
+}
+
+#cell2{
+    border-right: solid black 5px;
+    border-bottom: solid black 5px;
+}
+
+#cell3{
+    border-bottom: solid black 5px;
+}
+
+#cell4{
+    border-right: solid black 5px;
+    border-bottom: solid black 5px;
+}
+
+#cell5{
+    border-right: solid black 5px;
+    border-bottom: solid black 5px;
+}
+
+#cell6{
+    border-bottom: solid black 5px;
+}
+
+#cell7{
+    border-right: solid black 5px;
+}
+
+#cell8{
+    border-right: solid black 5px;
+}
+
+#space{
+    background-color:  #200F8C;
+}
+
+.container{
+    font-size: 100px;
+    text-align: center;
+}
+
+#reiniciar{
+    margin-top: 50px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media (max-width: 576px ){
+    #table1{
+       padding-left: 50px;
+       padding-right: 50px;
+    }
+    .col-sm-auto{
+        width: 100px;
+        height: 150px;
+        text-align: center;
+    }
+
+    .container{
+        font-size: 95px;
+    }
+
+
+}
+
+@media (max-width: 450px ){
+    #table1{
+       padding-left: 50px;
+       padding-right: 50px;
+    }
+    .col-sm-auto{
+        width: 50px;
+        height: 100px;
+        text-align: center;
+    }
+
+    .container{
+        font-size: 70px;
+    }
+
+}
+
+@media (max-width: 350px ){
+    #table1{
+       padding-left: 50px;
+       padding-right: 50px;
+    }
+    .col-sm-auto{
+        width: 25px;
+        height: 75px;
+        text-align: center;
+    }
+    .container{
+        font-size: 45px;
+    }
+
+}
+
+
+@media (max-width: 250px ){
+    #table1{
+       padding-left: 50px;
+       padding-right: 50px;
+    }
+    .col-sm-auto{
+        width: 20px;
+        height: 70px;
+        text-align: center;
+    }
+    .container{
+        font-size: 35px;
+    }
+
+}
