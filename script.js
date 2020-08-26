@@ -1,12 +1,4 @@
 terminou = false;
-var hor1 = false;
-var hor2 = false;
-var hor3 = false;
-var ver1 = false;
-var ver2 = false;
-var ver3 = false;
-var dp1 = false;
-var ds1 = false;
 var cont = 0
 function interaction(x) {
 
@@ -557,7 +549,7 @@ function bot_play() {
             document.getElementById("cell" + aux2).innerHTML = "O";
         } else {
             // VERIFICAÇÃO DO "X" NA HORZINTAL 1
-            if (hor1 != true) {
+            if (!isFull('horizontal1')) {
                 alert('hor1')
                 if (
                     document.getElementById("cell1").innerHTML == "X" &&
@@ -603,7 +595,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA HORIZONTAL 2
-            if (hor2 != true) {
+            if (!isFull('horizontal2')) {
                 alert('hor2')
                 if (
                     document.getElementById("cell4").innerHTML == "X" &&
@@ -649,7 +641,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA HORIZONTAL 3
-            if (hor3 != true) {
+            if (!isFull('horizontal3')) {
                 alert('hor3')
                 if ((
                     document.getElementById("cell7").innerHTML == "X" &&
@@ -697,7 +689,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 1
-            if (ver1 != true) {
+            if (!isFull('vertical1')) {
                 alert('ver1')
                 if ((
                     document.getElementById("cell1").innerHTML == "X" &&
@@ -745,7 +737,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 2
-            if (ver2 != true) {
+            if (!isFull('vertical2')) {
                 alert('ver2')
                 if ((
                     document.getElementById("cell2").innerHTML == "X" &&
@@ -792,7 +784,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 3
-            if (ver3 != true) {
+            if (!isFull('vertical3')) {
                 alert('ver3')
                 if ((
                     document.getElementById("cell3").innerHTML == "X" &&
@@ -840,7 +832,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA DIAGONAL PRINCIPAL
-            if (dp1 != true) {
+            if (!isFull('diagonalp')) {
                 alert('dp1')
                 if ((
                     document.getElementById("cell1").innerHTML == "X" &&
@@ -888,7 +880,7 @@ function bot_play() {
                 }
             }
             // VERIFICAÇÃO DO "X" NA DIAGONAL SECUNDÁRIA
-            if (ds1 != true) {
+            if (!isFull('diagonals')) {
                 alert('ds1')
                 if ((
                     document.getElementById("cell3").innerHTML == "X" &&
@@ -955,5 +947,74 @@ function bot_play_neutral() {
             aaux += 1
         }
         verify();
+    }
+}
+
+function isFull(name) {
+    switch (name) {
+        case "horizontal1":
+            if (document.getElementById("cell1").innerText != "" &&
+                document.getElementById("cell2").innerText != "" &&
+                document.getElementById("cell3").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "horizontal2":
+            if (document.getElementById("cell4").innerText != "" &&
+                document.getElementById("cell5").innerText != "" &&
+                document.getElementById("cell6").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "horizontal3":
+            if (document.getElementById("cell7").innerText != "" &&
+                document.getElementById("cell8").innerText != "" &&
+                document.getElementById("cell9").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "vertical1":
+            if (document.getElementById("cell1").innerText != "" &&
+                document.getElementById("cell4").innerText != "" &&
+                document.getElementById("cell7").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "vertical2":
+            if (document.getElementById("cell2").innerText != "" &&
+                document.getElementById("cell5").innerText != "" &&
+                document.getElementById("cell8").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "vertical3":
+            if (document.getElementById("cell3").innerText != "" &&
+                document.getElementById("cell6").innerText != "" &&
+                document.getElementById("cell9").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "diagonalp":
+            if (document.getElementById("cell1").innerText != "" &&
+                document.getElementById("cell5").innerText != "" &&
+                document.getElementById("cell9").innerText != "") {
+                return true;
+            }
+            break;
+
+        case "diagonals":
+            if (document.getElementById("cell3").innerText != "" &&
+                document.getElementById("cell5").innerText != "" &&
+                document.getElementById("cell7").innerText != "") {
+                return true;
+            }
+            break;
+
     }
 }
