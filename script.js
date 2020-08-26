@@ -173,12 +173,12 @@ function verify() {
     if (terminou == false) {
         var aux = 0;
         for (var i = 1; i <= 9; i += 1) {
-            if (document.getElementById("cell" + i).innerText != "") {
+            if (document.getElementById("cell" + i).innerText == "") {
                 aux = 1;
             }
         }
         if (aux == 0) {
-            alert('empate')
+            document.getElementById("reiniciar").style.display = "inline";
         }
     }
 }
@@ -189,7 +189,6 @@ function refresh() {
 }
 
 function bot_play_win() {
-    alert('atacando')
     if (terminou != true) {
         // VERIFICAÇÃO DO "O" NA HORZINTAL 1
         if (
@@ -532,7 +531,6 @@ function bot_play_win() {
 }
 
 function bot_play() {
-    alert('defendendo')
     if (terminou != true) {
         var aux;
         if (cont == 1) {
@@ -550,17 +548,14 @@ function bot_play() {
         } else {
             // VERIFICAÇÃO DO "X" NA HORZINTAL 1
             if (!isFull('horizontal1')) {
-                alert('hor1')
                 if (
                     document.getElementById("cell1").innerHTML == "X" &&
                     document.getElementById("cell2").innerHTML == "X") {
                     if (document.getElementById("cell3").innerHTML == "O") {
-                        alert('neutro')
                         bot_play_neutral();
                         return;
                     } else {
                         document.getElementById("cell3").innerHTML = "O";
-                        hor1 = true;
                         verify();
                         return;
                     }
@@ -573,7 +568,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell2").innerHTML = "O";
-                            hor1 = true;
                             verify();
                             return;
                         }
@@ -586,7 +580,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell1").innerHTML = "O";
-                                hor1 = true;
                                 verify();
                                 return;
                             }
@@ -596,7 +589,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA HORIZONTAL 2
             if (!isFull('horizontal2')) {
-                alert('hor2')
                 if (
                     document.getElementById("cell4").innerHTML == "X" &&
                     document.getElementById("cell5").innerHTML == "X") {
@@ -605,7 +597,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell6").innerHTML = "O";
-                        hor2 = true;
                         verify();
                         return;
                     }
@@ -618,7 +609,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell5").innerHTML = "O";
-                            hor2 = true;
                             verify();
                             return;
                         }
@@ -631,7 +621,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell4").innerHTML = "O";
-                                hor2 = true;
                                 verify();
                                 return;
                             }
@@ -642,7 +631,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA HORIZONTAL 3
             if (!isFull('horizontal3')) {
-                alert('hor3')
                 if ((
                     document.getElementById("cell7").innerHTML == "X" &&
                     document.getElementById("cell8").innerHTML == "X")) {
@@ -651,7 +639,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell9").innerHTML = "O";
-                        hor3 = true;
                         verify();
                         return;
                     }
@@ -665,7 +652,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell8").innerHTML = "O";
-                            hor3 = true;
                             verify();
                             return;
                         }
@@ -679,7 +665,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell7").innerHTML = "O";
-                                hor3 = true;
                                 verify();
                                 return;
                             }
@@ -690,7 +675,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 1
             if (!isFull('vertical1')) {
-                alert('ver1')
                 if ((
                     document.getElementById("cell1").innerHTML == "X" &&
                     document.getElementById("cell4").innerHTML == "X")) {
@@ -699,7 +683,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell7").innerHTML = "O";
-                        ver1 = true;
                         verify();
                         return;
                     }
@@ -713,7 +696,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell4").innerHTML = "O";
-                            ver1 = true;
                             verify();
                             return;
                         }
@@ -727,7 +709,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell1").innerHTML = "O";
-                                ver1 = true;
                                 verify();
                                 return;
                             }
@@ -738,7 +719,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 2
             if (!isFull('vertical2')) {
-                alert('ver2')
                 if ((
                     document.getElementById("cell2").innerHTML == "X" &&
                     document.getElementById("cell5").innerHTML == "X")) {
@@ -747,7 +727,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell8").innerHTML = "O";
-                        ver2 = true;
                         verify();
                         return;
                     }
@@ -761,7 +740,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell5").innerHTML = "O";
-                            ver2 = true;
                             verify();
                             return;
                         }
@@ -775,7 +753,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell2").innerHTML = "O";
-                                ver2 = true;
                                 verify();
                                 return;
                             }
@@ -785,7 +762,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA VERTICAL 3
             if (!isFull('vertical3')) {
-                alert('ver3')
                 if ((
                     document.getElementById("cell3").innerHTML == "X" &&
                     document.getElementById("cell6").innerHTML == "X")) {
@@ -794,7 +770,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell9").innerHTML = "O";
-                        ver3 = true;
                         verify();
                         return;
                     }
@@ -808,7 +783,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell6").innerHTML = "O";
-                            ver3 = true;
                             verify();
                             return;
                         }
@@ -822,7 +796,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell3").innerHTML = "O";
-                                ver3 = true;
                                 verify();
                                 return;
                             }
@@ -833,16 +806,14 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA DIAGONAL PRINCIPAL
             if (!isFull('diagonalp')) {
-                alert('dp1')
-                if ((
+                if (
                     document.getElementById("cell1").innerHTML == "X" &&
-                    document.getElementById("cell5").innerHTML == "X")) {
+                    document.getElementById("cell5").innerHTML == "X") {
                     if (document.getElementById("cell9").innerHTML == "O") {
                         bot_play_neutral();
                         return;
                     } else {
                         document.getElementById("cell9").innerHTML = "O";
-                        dp1 = true;
                         verify();
                         return;
                     }
@@ -856,7 +827,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell1").innerHTML = "O";
-                            dp1 = true;
                             verify();
                             return;
                         }
@@ -870,7 +840,6 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell5").innerHTML = "O";
-                                dp1 = true;
                                 verify();
                                 return;
                             }
@@ -881,7 +850,6 @@ function bot_play() {
             }
             // VERIFICAÇÃO DO "X" NA DIAGONAL SECUNDÁRIA
             if (!isFull('diagonals')) {
-                alert('ds1')
                 if ((
                     document.getElementById("cell3").innerHTML == "X" &&
                     document.getElementById("cell5").innerHTML == "X")) {
@@ -890,7 +858,6 @@ function bot_play() {
                         return;
                     } else {
                         document.getElementById("cell7").innerHTML = "O";
-                        ds1 = true;
                         verify();
                         return;
                     }
@@ -904,7 +871,6 @@ function bot_play() {
                             return;
                         } else {
                             document.getElementById("cell3").innerHTML = "O";
-                            ds1 = true;
                             verify();
                             return;
                         }
@@ -918,23 +884,25 @@ function bot_play() {
                                 return;
                             } else {
                                 document.getElementById("cell5").innerHTML = "O";
-                                ds1 = true;
                                 verify();
                                 return;
                             }
 
                         }
                     }
-                    bot_play_neutral();
+
                 }
             }
 
         }
+        if (cont != 1) {
+            bot_play_neutral();
+        }
+
     }
 }
 
 function bot_play_neutral() {
-    alert('neutro')
     if (terminou != true) {
         var aaux = 0;
         var numRand
