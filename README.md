@@ -1,3 +1,3 @@
-# TicTacToe_v2
-attempt to build a bot player [still in development]
+# Jogo da Velha
+Tentativa de fazer um jogo da velha com uma pseudo-inteligência artificial
 <h2> Demo: https://oajoj.github.io/TicTacToe_v2/ </h2>
